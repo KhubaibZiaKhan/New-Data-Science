@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-data = pd.read_csv('Titanic_Dataset.csv')
+data = pd.read_csv('bmw.csv')
 
 data.head(5)
 data.isnull().sum
