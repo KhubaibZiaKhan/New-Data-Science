@@ -1,0 +1,29 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = sns.load_dataset('penguins')
+df = df.dropna()
+
+sns.histplot(data=df, x='body_mass_g', bins=20, color='steelblue')
+plt.title('Distribution of Penguin Body Mass')
+plt.xlabel('Body Mass (grams)')
+plt.ylabel('Count')
+plt.show()
+
+sns.kdeplot(data=df, x='Flipper_length_mm', hue='species', fill=True)
+plt.title('Flipper Length Distribution by Species')
+plt.xlabel('Flipper Length (mm)')
+plt.show()
+
+sns.histplot(data=df, x='flipper_length_mm', kde=true, color='coral')
+plt.title('Flipper length - Histogram with KDE curve')
+plt.xlabel('Flipper Length (mm)')
+plt.ylabel('Count')
+plt.show()
+
+
+sns.scatterplot(data=df,x='flipper_length_mm',y='body_mass_g',hue='species')
+plt.title('Flipper Length vs Body Mass by Species')
+plt.xlabel('Flipper Length (mm)')
+plt.ylabel('Body Mass (grams)')
+plt.show()
